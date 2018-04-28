@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                s3Upload(file:'rectangle-18.jar', bucket:'tyetter01-test-bucket', path:'WORKSPACE')
+                s3Upload(file:'file.txt', bucket:'tyetter01-test-bucket', path:'path/to/target/file.txt')
             }
         }
     }
