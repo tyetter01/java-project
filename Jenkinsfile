@@ -3,7 +3,4 @@ pipeline {
 	stage(‘Build’) {
 		sh ‘ant’
 	}
-	stage(‘Test’) {
-		junit ‘reports/*.xml’
-	}
 }
