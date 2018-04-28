@@ -13,5 +13,10 @@ pipeline {
                 sh 'ant -f build.xml -v' 
             }
         }
+        stage('Deploy'){
+            steps{
+                s3Upload(file:'rectangle-16.jar', bucket:'tyetter01-test-bucket', path:'WORKSPACE')
+            }
+        }
     }
 }
