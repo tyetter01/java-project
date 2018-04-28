@@ -3,6 +3,8 @@ pipeline {
 
     stages {
         stage('Unit Test') {
+            sh ‘ant’
+            junit ‘reports/*.xml’
 
         }
     }
