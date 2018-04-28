@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                sh 'aws s3 cp s3://tyetter01-test-bucket/ --include "rectangle-*.jar"'
+                sh 'aws s3 cp rectangle-${BUILD_NUMBER}.jar s3://tyetter01-test-bucket/${BUILD_NUMBER}.jar'
             }
         }
     }
