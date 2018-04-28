@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                s3Upload(file:'file.txt', bucket:'tyetter01-test-bucket', path:'path/to/target/file.txt')
+                sh 'aws s3 cp s3://tyetter01-test-bucket/ --include "rectangle-*.jar"'
             }
         }
     }
