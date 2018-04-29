@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                sh 'aws s3 cp /workspace/java-pipeline/rectangle-${BUILD_NUMBER}.jar s3://tyetter01-test-bucket/rectangle-${BUILD_NUMBER}.jar'
+                sh 'aws s3 cp var/jenkins_home/workspace/java-pipeline/rectangle-${BUILD_NUMBER}.jar s3://tyetter01-test-bucket/rectangle-${BUILD_NUMBER}.jar'
             }
         }
     }
